@@ -40,7 +40,7 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  width: 10vw;
+  width: 5vw;
   text-align: right;
 }
 
@@ -65,30 +65,11 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  width: 10vw;
+  width: 5vw;
   
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-}
-
-.col-sm-4 {
-
-padding-left: 0;
-padding-right: 0;
-
-}
-.col-md-4 {
-
-  padding-left: 0;
-  padding-right: 0;
-
-}
-.col-lg-4 {
-
-  padding-left: 0;
-  padding-right: 0;
-
 }

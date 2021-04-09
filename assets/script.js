@@ -1,9 +1,10 @@
-//Current day
+//Current day display at the header
 var gradDate = moment().format("dddd,MMMM Do");
 $("#currentDay").text(gradDate);
 
+//Generates currenthour
 var currenthour = moment().format("ha");
-var starthour = 6;
+var starthour = 6; //day-planner begins from 6am morning
 
 
 for (var i = 0; i<12; i++ )
@@ -12,7 +13,6 @@ for (var i = 0; i<12; i++ )
 var nexthour = moment(String(starthour + i) + "AM", ["HH"]).format("hA");
 
 var timeblock = $("<div class = 'row time-block justify-content-center'></div>");
-var columnblock = $("<div class = 'col-sm-4 col-md-4 col-lg-4'</div>");
 
 var hour = $("<div class = 'hour'> </div>").text(nexthour);
 var textarea = $("<textarea class = 'description'>");
@@ -28,11 +28,12 @@ $(".container").append(timeblock);
 
 var plan = JSON.parse(localStorage.getItem(nexthour));
 if (plan != ""){
-    console.log(plan);
+   
     textarea.text(plan) ;
 
 }
 
+//Compare to find past,present or future time
 if ((moment(nexthour, ["hA"]).valueOf()) < (moment(currenthour, ["hA"]).valueOf()))
 
 {
@@ -52,14 +53,14 @@ else {
 
 }
 
-
+//Function to run when savebutton is clicked
 $('.saveBtn').on('click', function (event) {
+
     var selectedbutton = $(event.target);
-    console.log(selectedbutton.prev().val());
+ 
     var saveplan = selectedbutton.prev().val();
     var hour = selectedbutton.prev().prev().text()
-    console.log(selectedbutton.prev().prev().text());
-    
+
     localStorage.setItem(hour, JSON.stringify(saveplan));
    
 
