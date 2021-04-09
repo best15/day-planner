@@ -4,5 +4,5 @@ A simple day planner application where user can schedule their work for each hou
 
 Deploy Link:  https://best15.github.io/day-planner/
 
- ![DayPlanner-image](./images/dayplanner.jpg)
+ ![DayPlanner-image](./images/day-planner.jpg)
 
