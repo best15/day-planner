@@ -16,7 +16,8 @@ var columnblock = $("<div class = 'col-sm-4 col-md-4 col-lg-4'</div>");
 
 var hour = $("<div class = 'hour'> </div>").text(nexthour);
 var textarea = $("<textarea class = 'description'>");
-var savebtn = $("<button  class = 'saveBtn'> <i class='bi bi-save2'></i> </button>");
+var savebtn = $("<button  class = 'saveBtn'> <i class='fas fa-save'></i> </button>");
+
 
 textarea.attr('id', nexthour + 'txtarea' );
 savebtn.attr('id' , nexthour + 'btn' );
