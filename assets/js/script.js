@@ -3,7 +3,7 @@ var gradDate = moment().format("dddd,MMMM Do");
 $("#currentDay").text(gradDate);
 
 //Generates currenthour
-var currenthour = moment().format("ha");
+var currenthour = '8am';//moment().format("ha");
 var starthour = 6; //day-planner begins from 6am morning
 
 
