@@ -2,17 +2,20 @@
 var gradDate = moment().format("dddd,MMMM Do");
 $("#currentDay").text(gradDate);
 
-var currenthour = '11am'; //moment().format(hh a)
+var currenthour = moment().format("ha");
 var starthour = 6;
+
 
 for (var i = 0; i<12; i++ )
 { 
 
 var nexthour = moment(String(starthour + i) + "AM", ["HH"]).format("hA");
 
-var timeblock = $("<div class = 'row time-block'></div>");
+var timeblock = $("<div class = 'row time-block justify-content-center'></div>");
+var columnblock = $("<div class = 'col-sm-4 col-md-4 col-lg-4'</div>");
+
 var hour = $("<div class = 'hour'> </div>").text(nexthour);
-var textarea = $("<textarea>");
+var textarea = $("<textarea class = 'description'>");
 var savebtn = $("<button  class = 'saveBtn'> <i class='bi bi-save2'></i> </button>");
 
 textarea.attr('id', nexthour + 'txtarea' );
